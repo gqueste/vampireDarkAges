@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.general {
+    flex-basis: 33%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 300px;
+}
+
+.general > .label {
+    text-transform: uppercase;
+    flex-basis: 40%;
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+.categoryTitle {
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+input {
+    flex-grow: 1;
+    width: 0px;
+    margin-right: 15px;
+}
+
+.attributsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.attributCategory {
+    flex-basis: 33%;
+}
+
+.attributTitle {
+    text-align: center;
+    text-transform: uppercase;
+    margin-left:15px;
+    margin-right: 15px;
+}
+
+.attribut {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    min-width: 300;
+    margin-left: 15px;
+}
+
+.attribut > .label {
+    flex-basis: 40%;
+}
+
+.attribut > .points {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+    min-width: 150px;
+}
+
+.points > .point {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 1px;
+}
+
+.point:hover {
+    background-color: red;
+}
