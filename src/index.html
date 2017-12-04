@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Vampire</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <app-root></app-root>
+    <div class="rowContainer">
+        <div>
+            <div class="gridItem">
+                <span class="label general">Nom :</span>
+                <input class="value">
+            </div>
+            <div class="gridItem">
+                <span class="label general">Joueur :</span>
+                <input class="value">
+            </div>
+            <div class="gridItem">
+                <span class="label general">Chronique :</span>
+                <input class="value">
+            </div>
+        </div>
+        <div>
+            <div class="gridItem">
+                <span class="label general">Nature :</span>
+                <input class="value">
+            </div>
+            <div class="gridItem">
+                <span class="label general">Attitude :</span>
+                <input class="value">
+            </div>
+            <div class="gridItem">
+                <span class="label general">Concept :</span>
+                <input class="value">
+            </div>
+        </div>
+        <div>
+            <div class="gridItem">
+                <span class="label general">Clan :</span>
+                <input class="value">
+            </div>
+            <div class="gridItem">
+                <span class="label general">Génération :</span>
+                <input class="value">
+            </div>
+            <div class="gridItem">
+                <span class="label general">Sire :</span>
+                <input class="value">
+            </div>
+        </div>
+    </div>
+    <h2 class="categoryTitle">Attributs</h2>
+    <div class="rowContainer">
+        <div>
+            <h3 class="gridItemTitle primaire">Physiques</h3>
+            <div class="gridItem">
+                <span class="label">Force</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Dextérité</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Vigueur</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+        </div>
+        <div>
+            <h3 class="gridItemTitle secondaire">Sociaux</h3>
+            <div class="gridItem">
+                <span class="label">Charisme</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Manipulation</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Apparence</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+        </div>
+        <div>
+            <h3 class="gridItemTitle tertiaire">Mentaux</h3>
+            <div class="gridItem">
+                <span class="label">Perception</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Intelligence</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Astuce</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <h2 class="categoryTitle">Capacités</h2>
+    <div class="rowContainer">
+        <div>
+            <h3 class="gridItemTitle">Talents</h3>
+            <div class="gridItem">
+                <span class="label">Adresse</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Athlétisme</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Bagarre</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Commandement</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Empathie</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Expression</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Intuition</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Intimidation</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Subterfuge</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Vigilance</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+        </div>
+        <div>
+            <h3 class="gridItemTitle">Compétences</h3>
+            <div class="gridItem">
+                <span class="label">Animaux</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Artisanats</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Commerce</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Equitation</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Etiquette</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Furtivité</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Melée</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Représentation</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Survie</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Tir à l'arc</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+        </div>
+        <div>
+            <h3 class="gridItemTitle">Connaissances</h3>
+            <div class="gridItem">
+                <span class="label">Droit</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Enigmes</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Eruditions</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Investigation</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Médecine</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Occultisme</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Politique</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Sénéchal</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Sagesse populaire</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <span class="label">Théologie</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <h2 class="categoryTitle">Avantages</h2>
+    <div class="rowContainer">
+        <div>
+            <h3 class="gridItemTitle">Disciplines</h3>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+        </div>
+        <div>
+            <h3 class="gridItemTitle">Historique</h3>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <div class="gridItem">
+                <input class="key">
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+        </div>
+        <div>
+            <h3 class="gridItemTitle">Vertus</h3>
+            <div class="gridItem">
+                <span>Conscience/Conviction</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <br>
+            <div class="gridItem">
+                <span>Maitrise de soi/Instinct</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+            <br>
+            <div class="gridItem">
+                <span class="label">Courage</span>
+                <span class="points">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="rowContainer">
+        <div>
+            <h3 class="gridItemTitle">Autres traits</h3>
+        </div>
+        <div>
+            <h3 class="gridItemTitle">Voie</h3>
+            <div class="gridItem">
+                <div class="voie">
+                    <input>
+                </div>
+            </div>
+            <div class="gridItem">
+                <div class="pointsLarge">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </div>
+            </div>
+            <div class="gridItem">
+                <div class="voie">
+                    Aura : <input class="mediumInput"> (  )
+                </div>
+            </div>
+            <h3 class="gridItemTitle">Volonté</h3>
+            <div class="gridItem">
+                <div class="pointsLarge">
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                    <div class="point circlePoint"></div>
+                </div>
+            </div>
+            <div class="gridItem">
+                <div class="pointsLarge">
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                </div>
+            </div>
+            <h3 class="gridItemTitle">Réserve de sang</h3>
+            <div class="gridItem">
+                <div class="pointsLarge">
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                </div>
+            </div>
+            <div class="gridItem">
+                <div class="pointsLarge">
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                </div>
+            </div>
+            <div class="gridItem">
+                <div class="pointsLarge">
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                </div>
+            </div>
+            <div class="gridItem">
+                <div class="pointsLarge">
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                </div>
+            </div>
+            <div class="gridItem">
+                <div class="pointsLarge">
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 class="gridItemTitle">Santé</h3>
+            <div class="healthItem">
+                <div class="healthKey">Contusion</div>
+                <div class="point"></div>
+            </div>
+            <div class="healthItem">
+                <div class="healthKey">Blessure légère</div>
+                <div class="healthMiddleItem"> -1</div>
+                <div class="point"></div>
+            </div>
+            <div class="healthItem">
+                <div class="healthKey">Blessure moyenne</div>
+                <div class="healthMiddleItem"> -1</div>
+                <div class="point"></div>
+            </div>
+            <div class="healthItem">
+                <div class="healthKey">Blessure grave</div>
+                <div class="healthMiddleItem"> -2</div>
+                <div class="point"></div>
+            </div>
+            <div class="healthItem">
+                <div class="healthKey">Handicap</div>
+                <div class="healthMiddleItem"> -2</div>
+                <div class="point"></div>
+            </div>
+            <div class="healthItem">
+                <div class="healthKey">Infirmité</div>
+                <div class="healthMiddleItem"> -5</div>
+                <div class="point"></div>
+            </div>
+            <div class="healthItem">
+                <div class="healthKey">Invalidié</div>
+                <div class="point"></div>
+            </div>
+            <h3 class="gridItemTitle">Faiblesse</h3>
+        </div>
+    </div>
+</body>
+</html>
