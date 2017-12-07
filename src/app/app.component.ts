@@ -20,7 +20,8 @@ export class AppComponent {
         nature: this.archetypes[0],
         attitude: this.archetypes[0],
         attributs: DataService.attributs,
-        capacites: DataService.capacites
+        capacites: DataService.capacites,
+        avantages: DataService.avantages
     };
     
     constructor () { }

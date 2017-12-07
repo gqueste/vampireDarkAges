@@ -119,6 +119,319 @@ export class DataService {
     }
 
     static get capacites() {
-        return [];
+        return [
+            {
+                id: 'talents',
+                title: 'Talents',
+                importance: DataService.importances.primaire,
+                items: [
+                    {
+                        name: 'Adresse',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Athlétisme',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Bagarre',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Commandement',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Empathie',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Expression',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Intuition',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Intimidation',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Subterfuge',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Vigilance',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    }
+                ]
+            },
+            {
+                id: 'competences',
+                title: 'Compétences',
+                importance: DataService.importances.secondaire,
+                items: [
+                    {
+                        name: 'Animaux',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Artisanat',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Commerce',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Equitation',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Etiquette',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Furtivité',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Melée',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Représentation',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Survie',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Tir à l arc',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    }
+                ]
+            },
+            {
+                id: 'connaissances',
+                title: 'Connaissances',
+                importance: DataService.importances.tertiaire,
+                items: [
+                    {
+                        name: 'Droit',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Enigmes',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Eruditions',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Investigation',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Médecine',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Occultisme',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Politique',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Sénéchal',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Sagesse populaire',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Théologie',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    }
+                ]
+            }
+        ]
+    }
+
+    static get avantages() {
+        return [
+            {
+                id: 'disciplines',
+                title: 'Disciplines',
+                items: [
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    }
+                ]
+            },
+            {
+                id: 'historique',
+                title: 'Historique',
+                items: [
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: '',
+                        type: 'input',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    }
+                ]
+            },
+            {
+                id: 'vertus',
+                title: 'Vertus',
+                items: [
+                    {
+                        name: 'Conscience/Conviction',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 4
+                    },
+                    {
+                        name: 'Maitre de soi/Instinct',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 4
+                    },
+                    {
+                        name: 'Courage',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 4
+                    }
+                ]
+            }
+        ];
     }
 }
