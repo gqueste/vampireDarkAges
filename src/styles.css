@@ -1,3 +1,5 @@
+@import "../node_modules/font-awesome/css/font-awesome.css";
+
 .categoryTitle {
     text-align: center;
     margin-left: 15px;
@@ -44,9 +46,13 @@ input .value {
     display: flex;
     flex-wrap: nowrap;
     align-content: space-between;
-    min-width: 300;
-    max-width: 300;
+    min-width: 300px;
+    max-width: 300px;
     margin-left: 15px;
+}
+
+.gridItem > select {
+    flex-basis: 60%;
 }
 
 .healthItem {
@@ -75,7 +81,6 @@ input .value {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
-    margin-right: 15px;
 }
 
 .point {
@@ -85,12 +90,17 @@ input .value {
     margin-right: 1px;
 }
 
-.circlePoint {
-    border-radius: 50%;
+.pointActive {
+    background-color: red;
 }
 
-.point:hover {
-    background-color: red;
+.alterPoints {
+    display: flex;
+    align-items: center;
+}
+
+.circlePoint {
+    border-radius: 50%;
 }
 
 .voie {
@@ -120,4 +130,10 @@ input .value {
 
 .tertiaire {
     font-size: 15px;
+}
+
+.smallButton {
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 12px !important;
 }
