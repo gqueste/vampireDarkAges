@@ -143,6 +143,10 @@ input .value {
     text-align: center;
 }
 
-.importance {
-    margin-bottom: 5px;
+.importanceSelect {
+    margin-bottom: 10px;
+}
+
+.importanceTitle {
+    margin-bottom: 0px;
 }

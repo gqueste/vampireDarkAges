@@ -25,9 +25,12 @@ export class AppComponent {
     };
     
     constructor () {
-        this.characterSheet.attributs.forEach((attribut, index) => {
-            attribut.importance = this.IMPORTANCES[index];
-        });
+        const setImportance = (element, importanceIndex) => {
+            element.importance = this.IMPORTANCES[importanceIndex];
+        };
+
+        this.characterSheet.attributs.forEach(setImportance);
+        this.characterSheet.capacites.forEach(setImportance);
     }
 
     onItemPlusClick(item) {
@@ -42,10 +45,10 @@ export class AppComponent {
         }
     }
 
-    onImportanceChanged(importance, attribut) {
-        const previousSelectedImportance = attribut.importance;
-        const attributeWithSelectedImportance = this.characterSheet.attributs.find(att => att.importance.id === importance.id);
-        attributeWithSelectedImportance.importance = previousSelectedImportance;
-        attribut.importance = importance;
+    onImportanceChanged(importance, element, arr) {
+        const previousSelectedImportance = element.importance;
+        const elementWithSelectedImportance = arr.find(att => att.importance.id === importance.id);
+        elementWithSelectedImportance.importance = previousSelectedImportance;
+        element.importance = importance;
     }
 }

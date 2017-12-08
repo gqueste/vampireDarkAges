@@ -132,7 +132,7 @@ export class DataService {
             {
                 id: 'talents',
                 title: 'Talents',
-                importance: DataService.importances[0],
+                importance: undefined,
                 items: [
                     {
                         name: 'Adresse',
@@ -199,7 +199,7 @@ export class DataService {
             {
                 id: 'competences',
                 title: 'Compétences',
-                importance: DataService.importances[1],
+                importance: undefined,
                 items: [
                     {
                         name: 'Animaux',
@@ -266,7 +266,7 @@ export class DataService {
             {
                 id: 'connaissances',
                 title: 'Connaissances',
-                importance: DataService.importances[2],
+                importance: undefined,
                 items: [
                     {
                         name: 'Droit',

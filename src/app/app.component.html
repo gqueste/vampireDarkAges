@@ -51,9 +51,9 @@
 <h2 class="categoryTitle">Attributs</h2>
 <div class="rowContainer">
     <div *ngFor="let attribut of characterSheet.attributs">
-        <h3 class="gridItemTitle importance" [ngClass]="attribut.importance.id">{{ attribut.title }}</h3>
+        <h3 class="gridItemTitle importanceTitle" [ngClass]="attribut.importance.id">{{ attribut.title }}</h3>
         <div class="centerDiv">
-            <select class="importance" [ngModel]="attribut.importance" (ngModelChange)="onImportanceChanged($event, attribut)">
+            <select class="importanceSelect" [ngModel]="attribut.importance" (ngModelChange)="onImportanceChanged($event, attribut, characterSheet.attributs)">
                 <option *ngFor="let importance of IMPORTANCES" [ngValue]="importance">{{ importance.name }}</option>
             </select>
         </div>
@@ -72,7 +72,12 @@
 <h2 class="categoryTitle">Capacités</h2>
 <div class="rowContainer">
     <div *ngFor="let capacite of characterSheet.capacites">
-        <h3 class="gridItemTitle" [ngClass]="capacite.importance">{{ capacite.title }}</h3>
+        <h3 class="gridItemTitle importanceTitle" [ngClass]="capacite.importance.id">{{ capacite.title }}</h3>
+        <div class="centerDiv">
+            <select class="importanceSelect" [ngModel]="capacite.importance" (ngModelChange)="onImportanceChanged($event, capacite, characterSheet.capacites)">
+                <option *ngFor="let importance of IMPORTANCES" [ngValue]="importance">{{ importance.name }}</option>
+            </select>
+        </div>
         <div class="gridItem" *ngFor="let item of capacite.items">
             <span class="label">{{ item.name }}</span>
             <span class="points">
