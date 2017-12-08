@@ -24,7 +24,11 @@ export class AppComponent {
         avantages: DataService.avantages
     };
     
-    constructor () { }
+    constructor () {
+        this.characterSheet.attributs.forEach((attribut, index) => {
+            attribut.importance = this.IMPORTANCES[index];
+        });
+    }
 
     onItemPlusClick(item) {
         if (item.points < item.pointsMax) {
@@ -36,5 +40,12 @@ export class AppComponent {
         if (item.points > item.pointsMin) {
             item.points --;
         }
+    }
+
+    onImportanceChanged(importance, attribut) {
+        const previousSelectedImportance = attribut.importance;
+        const attributeWithSelectedImportance = this.characterSheet.attributs.find(att => att.importance.id === importance.id);
+        attributeWithSelectedImportance.importance = previousSelectedImportance;
+        attribut.importance = importance;
     }
 }

@@ -138,3 +138,11 @@ input .value {
 .smallButton:hover {
     cursor: pointer;
 }
+
+.centerDiv {
+    text-align: center;
+}
+
+.importance {
+    margin-bottom: 5px;
+}

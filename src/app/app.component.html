@@ -51,7 +51,12 @@
 <h2 class="categoryTitle">Attributs</h2>
 <div class="rowContainer">
     <div *ngFor="let attribut of characterSheet.attributs">
-        <h3 class="gridItemTitle" [ngClass]="attribut.importance">{{ attribut.title }}</h3>
+        <h3 class="gridItemTitle importance" [ngClass]="attribut.importance.id">{{ attribut.title }}</h3>
+        <div class="centerDiv">
+            <select class="importance" [ngModel]="attribut.importance" (ngModelChange)="onImportanceChanged($event, attribut)">
+                <option *ngFor="let importance of IMPORTANCES" [ngValue]="importance">{{ importance.name }}</option>
+            </select>
+        </div>
         <div class="gridItem" *ngFor="let item of attribut.items">
             <span class="label">{{ item.name }}</span>
             <span class="points">

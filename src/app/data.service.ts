@@ -31,11 +31,20 @@ export class DataService {
     }
     
     static get importances() {
-        return {
-            primaire: 'primaire',
-            secondaire: 'secondaire',
-            tertiaire: 'tertiaire'
-        };
+        return [
+            {
+                id: 'primaire',
+                name: 'Primaire'
+            },
+            {
+                id: 'secondaire',
+                name: 'Secondaire'
+            },
+            {
+                id: 'tertiaire',
+                name: 'Tertiaire'
+            }
+        ];
     }
     
     static get attributs() {
@@ -43,7 +52,7 @@ export class DataService {
             {
                 id: 'physiques',
                 title: 'Physiques',
-                importance: DataService.importances.primaire,
+                importance: undefined,
                 items: [
                     {
                         name: 'Force',
@@ -68,7 +77,7 @@ export class DataService {
             {
                 id: 'sociaux',
                 title: 'Sociaux',
-                importance: DataService.importances.secondaire,
+                importance: undefined,
                 items: [
                     {
                         name: 'Charisme',
@@ -93,7 +102,7 @@ export class DataService {
             {
                 id: 'mentaux',
                 title: 'Mentaux',
-                importance: DataService.importances.tertiaire,
+                importance: undefined,
                 items: [
                     {
                         name: 'Perception',
@@ -123,7 +132,7 @@ export class DataService {
             {
                 id: 'talents',
                 title: 'Talents',
-                importance: DataService.importances.primaire,
+                importance: DataService.importances[0],
                 items: [
                     {
                         name: 'Adresse',
@@ -190,7 +199,7 @@ export class DataService {
             {
                 id: 'competences',
                 title: 'Compétences',
-                importance: DataService.importances.secondaire,
+                importance: DataService.importances[1],
                 items: [
                     {
                         name: 'Animaux',
@@ -257,7 +266,7 @@ export class DataService {
             {
                 id: 'connaissances',
                 title: 'Connaissances',
-                importance: DataService.importances.tertiaire,
+                importance: DataService.importances[2],
                 items: [
                     {
                         name: 'Droit',
