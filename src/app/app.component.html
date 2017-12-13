@@ -56,6 +56,7 @@
             <select class="importanceSelect" [ngModel]="attribut.importance" (ngModelChange)="onImportanceChanged($event, attribut, characterSheet.attributs)">
                 <option *ngFor="let importance of IMPORTANCES" [ngValue]="importance">{{ importance.name }}</option>
             </select>
+            {{ attribut.pointsAvailable }}
         </div>
         <div class="gridItem" *ngFor="let item of attribut.items">
             <span class="label">{{ item.name }}</span>
@@ -63,8 +64,8 @@
                 <div class="point circlePoint" [ngClass]="i < item.points ? 'pointActive' : ''" *ngFor="let point of Arr(item.pointsMax).fill(1); index as i"></div>
             </span>
             <span class="alterPoints">
-                <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item)"></span>
-                <span class="smallButton fa fa-plus" (click)="onItemPlusClick(item)"></span>
+                <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item, attribut)"></span>
+                <span class="smallButton fa fa-plus" (click)="onItemPlusClick(item, attribut)"></span>
             </span>
         </div>
     </div>
@@ -77,6 +78,7 @@
             <select class="importanceSelect" [ngModel]="capacite.importance" (ngModelChange)="onImportanceChanged($event, capacite, characterSheet.capacites)">
                 <option *ngFor="let importance of IMPORTANCES" [ngValue]="importance">{{ importance.name }}</option>
             </select>
+            {{ capacite.pointsAvailable }}
         </div>
         <div class="gridItem" *ngFor="let item of capacite.items">
             <span class="label">{{ item.name }}</span>
@@ -84,8 +86,8 @@
                 <div class="point circlePoint" [ngClass]="i < item.points ? 'pointActive' : ''" *ngFor="let point of Arr(item.pointsMax).fill(1); index as i"></div>
             </span>
             <span class="alterPoints">
-                <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item)"></span>
-                <span class="smallButton fa fa-plus" (click)="onItemPlusClick(item)"></span>
+                <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item, capacite)"></span>
+                <span class="smallButton fa fa-plus" (click)="onItemPlusClick(item, capacite)"></span>
             </span>
         </div>
     </div>

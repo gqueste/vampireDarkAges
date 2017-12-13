@@ -15,6 +15,17 @@ export class DataService {
         ];
     }
     
+    static get elementTypes() {
+        return {
+            ATTRIBUT: {
+                id: 'attribut'
+            },
+            CAPACITE: {
+                id: 'capacite'
+            }
+        }
+    }
+    
     static get archetypes() {
         return [
             {
@@ -34,15 +45,21 @@ export class DataService {
         return [
             {
                 id: 'primaire',
-                name: 'Primaire'
+                name: 'Primaire',
+                defaultPointsAttributs: 7,
+                defaultPointsCapacites: 13
             },
             {
                 id: 'secondaire',
-                name: 'Secondaire'
+                name: 'Secondaire',
+                defaultPointsAttributs: 5,
+                defaultPointsCapacites: 9
             },
             {
                 id: 'tertiaire',
-                name: 'Tertiaire'
+                name: 'Tertiaire',
+                defaultPointsAttributs: 3,
+                defaultPointsCapacites: 5
             }
         ];
     }
@@ -52,6 +69,8 @@ export class DataService {
             {
                 id: 'physiques',
                 title: 'Physiques',
+                pointsAvailable: 0,
+                type: DataService.elementTypes.ATTRIBUT,
                 importance: undefined,
                 items: [
                     {
@@ -77,6 +96,8 @@ export class DataService {
             {
                 id: 'sociaux',
                 title: 'Sociaux',
+                pointsAvailable: 0,
+                type: DataService.elementTypes.ATTRIBUT,
                 importance: undefined,
                 items: [
                     {
@@ -102,6 +123,8 @@ export class DataService {
             {
                 id: 'mentaux',
                 title: 'Mentaux',
+                pointsAvailable: 0,
+                type: DataService.elementTypes.ATTRIBUT,
                 importance: undefined,
                 items: [
                     {
@@ -132,6 +155,8 @@ export class DataService {
             {
                 id: 'talents',
                 title: 'Talents',
+                pointsAvailable: 0,
+                type: DataService.elementTypes.CAPACITE,
                 importance: undefined,
                 items: [
                     {
@@ -199,6 +224,8 @@ export class DataService {
             {
                 id: 'competences',
                 title: 'Compétences',
+                pointsAvailable: 0,
+                type: DataService.elementTypes.CAPACITE,
                 importance: undefined,
                 items: [
                     {
@@ -266,6 +293,8 @@ export class DataService {
             {
                 id: 'connaissances',
                 title: 'Connaissances',
+                type: DataService.elementTypes.CAPACITE,
+                pointsAvailable: 0,
                 importance: undefined,
                 items: [
                     {

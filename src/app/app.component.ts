@@ -14,6 +14,7 @@ export class AppComponent {
     archetypes = DataService.archetypes;
 
     IMPORTANCES = DataService.importances;
+    ELEMENT_TYPES = DataService.elementTypes;
 
     characterSheet = {
         clan: this.clans[0],
@@ -25,30 +26,51 @@ export class AppComponent {
     };
     
     constructor () {
-        const setImportance = (element, importanceIndex) => {
-            element.importance = this.IMPORTANCES[importanceIndex];
+        const setDefaultImportances = (element, importanceIndex) => {
+            const importance = this.IMPORTANCES[importanceIndex];
+            this.setImportance(element, importance);
         };
 
-        this.characterSheet.attributs.forEach(setImportance);
-        this.characterSheet.capacites.forEach(setImportance);
+        this.characterSheet.attributs.forEach(setDefaultImportances);
+        this.characterSheet.capacites.forEach(setDefaultImportances);
     }
 
-    onItemPlusClick(item) {
-        if (item.points < item.pointsMax) {
+    onItemPlusClick(item, element) {
+        if (item.points < item.pointsMax && element.pointsAvailable > 0) {
             item.points ++;
+            element.pointsAvailable --;
         }
     }
 
-    onItemMinusClick(item) {
-        if (item.points > item.pointsMin) {
+    onItemMinusClick(item, element) {
+        if (item.points > item.pointsMin && element.pointsAvailable <= element.pointsDefauts) {
             item.points --;
+            element.pointsAvailable ++;
         }
+    }
+
+    setImportance(element, importance) {
+        element.importance = importance;
+        element.pointsAvailable = this.isAttribute(element) ? importance.defaultPointsAttributs : importance.defaultPointsCapacites;
+        element.pointsDefauts = element.pointsAvailable;
+    }
+
+    isAttribute(element) {
+        return element.type.id === this.ELEMENT_TYPES.ATTRIBUT.id;
     }
 
     onImportanceChanged(importance, element, arr) {
         const previousSelectedImportance = element.importance;
         const elementWithSelectedImportance = arr.find(att => att.importance.id === importance.id);
-        elementWithSelectedImportance.importance = previousSelectedImportance;
-        element.importance = importance;
+        this.setImportance(elementWithSelectedImportance, previousSelectedImportance);
+        this.resetItems(elementWithSelectedImportance);
+        this.setImportance(element, importance);
+        this.resetItems(element);
+    }
+
+    resetItems(element) {
+        element.items.forEach((item) => {
+            item.points = item.pointsMin;
+        });
     }
 }
