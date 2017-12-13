@@ -15,6 +15,7 @@ export class AppComponent {
 
     IMPORTANCES = DataService.importances;
     ELEMENT_TYPES = DataService.elementTypes;
+    MAX_POINTS_CAPACITE = 3;
 
     characterSheet = {
         clan: this.clans[0],
@@ -36,14 +37,18 @@ export class AppComponent {
     }
 
     onItemPlusClick(item, element) {
-        if (item.points < item.pointsMax && element.pointsAvailable > 0) {
+        const maxedOut = i => i.points >= i.pointsMax;
+        const pointsAvailable = e => e.pointsAvailable > 0;
+        const maxCapacite = (e, i) => !this.isAttribute(e) && i.points >= this.MAX_POINTS_CAPACITE;
+
+        if (!maxedOut(item) && pointsAvailable(element) && !maxCapacite(element, item)) {
             item.points ++;
             element.pointsAvailable --;
         }
     }
 
     onItemMinusClick(item, element) {
-        if (item.points > item.pointsMin && element.pointsAvailable <= element.pointsDefauts) {
+        if (item.points > item.pointsMin) {
             item.points --;
             element.pointsAvailable ++;
         }
