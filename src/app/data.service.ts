@@ -1,20 +1,550 @@
 export class DataService {
-    
+
     static get clans() {
         return [
             {
-                id: 'clan1',
-                name: 'Clan 1',
-                description: 'Description du Clan 1'
+                id: 'assamite',
+                name: 'Assamite',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    },
+                    {
+                        id: 'quietus_hematus',
+                        name: 'Quietus (Hematus)'
+                    }
+                ]
             },
             {
-                id: 'clan2',
-                name: 'Clan 2',
-                description: 'Description du Clan 2'
+                id: 'brujah',
+                name: 'Brujah',
+                disciplines: [
+                    {
+                        id: 'celerite',
+                        name: 'Célérité'
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    },
+                    {
+                        id: 'puissance',
+                        name: 'Puissance'
+                    }
+                ]
+            },
+            {
+                id: 'cappadocien',
+                name: 'Cappadocien',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'necromancie',
+                        name: 'Nécromancie'
+                    }
+                ]
+            },
+            {
+                id: 'gangrel',
+                name: 'Gangrel',
+                disciplines: [
+                    {
+                        id: 'animalisme',
+                        name: 'Animalisme'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'proteisme',
+                        name: 'Protéisme'
+                    }
+                ]
+            },
+            {
+                id: 'lasombra',
+                name: 'Lasombra',
+                disciplines: [
+                    {
+                        id: 'domination',
+                        name: 'Domination'
+                    },
+                    {
+                        id: 'obtenebration',
+                        name: 'Obténébration'
+                    },
+                    {
+                        id: 'puissance',
+                        name: 'Puissance'
+                    }
+                ]
+            },
+            {
+                id: 'malkavien',
+                name: 'Malkavien',
+                disciplines: [
+                    {
+                        id: 'alienation',
+                        name: 'Aliénation'
+                    },
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'occultation',
+                        name: 'Occultation'
+                    }
+                ]
+            },
+            {
+                id: 'nosferatu',
+                name: 'Nosferatu',
+                disciplines: [
+                    {
+                        id: 'animalisme',
+                        name: 'Animalisme'
+                    },
+                    {
+                        id: 'occultation',
+                        name: 'Occultation'
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    }
+                ]
+            },
+            {
+                id: 'ravnos',
+                name: 'Ravnos',
+                disciplines: [
+                    {
+                        id: 'animalisme',
+                        name: 'Animalisme'
+                    },
+                    {
+                        id: 'chimerie',
+                        name: 'Chimérie'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    }
+                ]
+            },
+            {
+                id: 'setite',
+                name: 'Setite',
+                disciplines: [
+                    {
+                        id: 'occultation',
+                        name: 'Occultation'
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    },
+                    {
+                        id: 'serpentis',
+                        name: 'Serpentis'
+                    }
+                ]
+            },
+            {
+                id: 'toreador',
+                name: 'Toréador',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'celerite',
+                        name: 'Célérité'
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    }
+                ]
+            },
+            {
+                id: 'tremere',
+                name: 'Tremere',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'domination',
+                        name: 'Domination'
+                    },
+                    {
+                        id: 'thaumaturgie',
+                        name: 'Thaumaturgie'
+                    }
+                ]
+            },
+            {
+                id: 'tzimisce',
+                name: 'Tzimisce',
+                disciplines: [
+                    {
+                        id: 'animalisme',
+                        name: 'Animalisme'
+                    },
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'vicissitude',
+                        name: 'Vicissitude'
+                    }
+                ]
+            },
+            {
+                id: 'ventrue',
+                name: 'Ventrue',
+                disciplines: [
+                    {
+                        id: 'domination',
+                        name: 'Domination'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    }
+                ]
+            },
+            {
+                id: 'ahrimane',
+                name: 'Ahrimane',
+                disciplines: [
+                    {
+                        id: 'animalisme',
+                        name: 'Animalisme'
+                    },
+                    {
+                        id: 'puissance',
+                        name: 'Puissance'
+                    },
+                    {
+                        id: 'spiritus',
+                        name: 'Spiritus'
+                    }
+                ]
+            },
+            {
+                id: 'anda',
+                name: 'Anda',
+                disciplines: [
+                    {
+                        id: 'animalisme',
+                        name: 'Animalisme'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'proteisme',
+                        name: 'Protéisme'
+                    }
+                ]
+            },
+            {
+                id: 'baali',
+                name: 'Baali',
+                disciplines: [
+                    {
+                        id: 'daemonium',
+                        name: 'Daemonium'
+                    },
+                    {
+                        id: 'occultation',
+                        name: 'Occultation'
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    }
+                ]
+            },
+            {
+                id: 'bonsam',
+                name: 'Bonsam',
+                disciplines: [
+                    {
+                        id: 'abombwe',
+                        name: 'Abombwe'
+                    },
+                    {
+                        id: 'occultation',
+                        name: 'Occultation'
+                    },
+                    {
+                        id: 'puissance',
+                        name: 'Puissance'
+                    }
+                ]
+            },
+            {
+                id: 'danava',
+                name: 'Danava',
+                disciplines: [
+                    {
+                        id: 'domination',
+                        name: 'Domination'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'thaumaturgie',
+                        name: 'Thaumaturgie'
+                    }
+                ]
+            },
+            {
+                id: 'gargouille',
+                name: `Gargouille`,
+                disciplines: [
+                    {
+                        id: 'puissance',
+                        name: 'Puissance'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'vol',
+                        name: 'Vol'
+                    }
+                ]
+            },
+            {
+                id: 'giovani',
+                name: 'Giovani',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'necromancie',
+                        name: 'Nécromancie'
+                    }
+                ]
+            },
+            {
+                id: 'impundulu',
+                name: 'Impundulu',
+                disciplines: [
+                    {
+                        id: 'necromancie',
+                        name: 'Nécromancie'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    }
+                ]
+            },
+            {
+                id: 'lamie',
+                name: 'Lamie',
+                disciplines: [
+                    {
+                        id: 'necromancie',
+                        name: 'Nécromancie'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'puissance',
+                        name: 'Puissance'
+                    }
+                ]
+            },
+            {
+                id: 'lhiannan',
+                name: 'Lhiannan',
+                disciplines: [
+                    {
+                        id: 'animalisme',
+                        name: 'Animalisme'
+                    },
+                    {
+                        id: 'ogham',
+                        name: `Ogham`
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    }
+                ]
+            },
+            {
+                id: 'nagaraja',
+                name: 'Nagaraja',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'domination',
+                        name: 'Domination'
+                    },
+                    {
+                        id: 'necromancie',
+                        name: 'Nécromancie'
+                    }
+                ]
+            },
+            {
+                id: 'niktuku',
+                name: 'Niktuku',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'celerite',
+                        name: 'Célérité'
+                    },
+                    {
+                        id: 'puissance',
+                        name: 'Puissance'
+                    }
+                ]
+            },
+            {
+                id: 'ramanga',
+                name: 'Ramanga',
+                disciplines: [
+                    {
+                        id: 'aizina',
+                        name: 'Aizina'
+                    },
+                    {
+                        id: 'occultation',
+                        name: 'Occultation'
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    }
+                ]
+            },
+            {
+                id: 'salubrienGuerisseur',
+                name: 'Salubrien Guérisseur',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'auspex'
+                    },
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    },
+                    {
+                        id: 'valeren',
+                        name: 'Valeren'
+                    }
+                ]
+            },
+            {
+                id: 'salubrienGuerrier',
+                name: 'Salubrien Guerrier',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'Auspex'
+                    },
+                    {
+                        id: 'forceDAme',
+                        name: `Force d'âme`
+                    },
+                    {
+                        id: 'valeren',
+                        name: 'Valeren'
+                    }
+                ]
+            },
+            {
+                id: 'salubrienVeilleur',
+                name: 'Salubrien Veilleur',
+                disciplines: [
+                    {
+                        id: 'auspex',
+                        name: 'auspex'
+                    },
+                    {
+                        id: 'occultation',
+                        name: 'Occultation'
+                    },
+                    {
+                        id: 'valeren',
+                        name: 'Valeren'
+                    }
+                ]
+            },
+            {
+                id: 'vraiBrujah',
+                name: 'Vrai Brujah',
+                disciplines: [
+                    {
+                        id: 'presence',
+                        name: 'Présence'
+                    },
+                    {
+                        id: 'puissance',
+                        name: 'Puissance'
+                    },
+                    {
+                        id: 'temporis',
+                        name: 'Temporis'
+                    }
+                ]
             }
         ];
     }
-    
+
     static get elementTypes() {
         return {
             ATTRIBUT: {
@@ -25,7 +555,7 @@ export class DataService {
             }
         }
     }
-    
+
     static get archetypes() {
         return [
             {
@@ -40,7 +570,7 @@ export class DataService {
             }
         ];
     }
-    
+
     static get importances() {
         return [
             {
@@ -63,7 +593,7 @@ export class DataService {
             }
         ];
     }
-    
+
     static get attributs() {
         return [
             {
