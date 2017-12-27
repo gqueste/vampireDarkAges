@@ -25,7 +25,7 @@ export class AppComponent {
         capacites: DataService.capacites,
         avantages: DataService.avantages
     };
-    
+
     constructor () {
         const setDefaultImportances = (element, importanceIndex) => {
             const importance = this.IMPORTANCES[importanceIndex];
@@ -34,12 +34,13 @@ export class AppComponent {
 
         this.characterSheet.attributs.forEach(setDefaultImportances);
         this.characterSheet.capacites.forEach(setDefaultImportances);
+        this.setDisciplines(this.clans[0].disciplines);
     }
 
     onItemPlusClick(item, element) {
         const maxedOut = i => i.points >= i.pointsMax;
         const pointsAvailable = e => e.pointsAvailable > 0;
-        const maxCapacite = (e, i) => !this.isAttribute(e) && i.points >= this.MAX_POINTS_CAPACITE;
+        const maxCapacite = (e, i) => this.isCapacite(e) && i.points >= this.MAX_POINTS_CAPACITE;
 
         if (!maxedOut(item) && pointsAvailable(element) && !maxCapacite(element, item)) {
             item.points ++;
@@ -60,8 +61,12 @@ export class AppComponent {
         element.pointsDefauts = element.pointsAvailable;
     }
 
+    isCapacite(element) {
+        return element.type && element.type.id === this.ELEMENT_TYPES.CAPACITE.id;
+    }
+
     isAttribute(element) {
-        return element.type.id === this.ELEMENT_TYPES.ATTRIBUT.id;
+        return element.type && element.type.id === this.ELEMENT_TYPES.ATTRIBUT.id;
     }
 
     onImportanceChanged(importance, element, arr) {
@@ -77,5 +82,24 @@ export class AppComponent {
         element.items.forEach((item) => {
             item.points = item.pointsMin;
         });
+    }
+
+    onClanChange(clan) {
+        this.setDisciplines(clan.disciplines);
+    }
+
+    setDisciplines(disciplines) {
+        let currentDisciplines = [];
+        disciplines.forEach((discipline) => {
+            let newElement = {
+                points: 0,
+                pointsMin: 0,
+                pointsMax: 9,
+                name: discipline.name
+            };
+            currentDisciplines.push(newElement);
+        });
+        this.characterSheet.avantages[0].pointsAvailable = 4;
+        this.characterSheet.avantages[0].items = currentDisciplines;
     }
 }

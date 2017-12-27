@@ -897,6 +897,7 @@ export class DataService {
             {
                 id: 'disciplines',
                 title: 'Disciplines',
+                pointsAvailable: 4,
                 items: [
                     {
                         name: '',
@@ -938,6 +939,7 @@ export class DataService {
             {
                 id: 'historique',
                 title: 'Historique',
+                pointsAvailable: 5,
                 items: [
                     {
                         name: '',
@@ -979,6 +981,7 @@ export class DataService {
             {
                 id: 'vertus',
                 title: 'Vertus',
+                pointsAvailable: 3,
                 items: [
                     {
                         name: 'Conscience/Conviction',

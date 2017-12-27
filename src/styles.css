@@ -43,8 +43,8 @@ input .value {
     display: flex;
     flex-wrap: nowrap;
     align-content: space-between;
-    min-width: 310px;
-    max-width: 310px;
+    min-width: 315px;
+    max-width: 315px;
     margin-left: 15px;
 }
 
@@ -139,8 +139,9 @@ input .value {
     cursor: pointer;
 }
 
-.centerDiv {
+.pointsAvailable {
     text-align: center;
+    min-height: 30px
 }
 
 .importanceSelect {

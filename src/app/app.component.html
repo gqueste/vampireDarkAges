@@ -34,7 +34,7 @@
     <div>
         <div class="gridItem">
             <span class="label general">Clan :</span>
-            <select [(ngModel)]="characterSheet.clan" title="Choix de clan">
+            <select [(ngModel)]="characterSheet.clan" title="Choix de clan" (ngModelChange)="onClanChange(characterSheet.clan)">
                 <option *ngFor="let clan of clans" [ngValue]="clan">{{ clan.name }}</option>
             </select>
         </div>
@@ -52,7 +52,7 @@
 <div class="rowContainer">
     <div *ngFor="let attribut of characterSheet.attributs">
         <h3 class="gridItemTitle importanceTitle" [ngClass]="attribut.importance.id">{{ attribut.title }}</h3>
-        <div class="centerDiv">
+        <div class="pointsAvailable">
             <select class="importanceSelect" [ngModel]="attribut.importance" (ngModelChange)="onImportanceChanged($event, attribut, characterSheet.attributs)">
                 <option *ngFor="let importance of IMPORTANCES" [ngValue]="importance">{{ importance.name }}</option>
             </select>
@@ -74,7 +74,7 @@
 <div class="rowContainer">
     <div *ngFor="let capacite of characterSheet.capacites">
         <h3 class="gridItemTitle importanceTitle" [ngClass]="capacite.importance.id">{{ capacite.title }}</h3>
-        <div class="centerDiv">
+        <div class="pointsAvailable">
             <select class="importanceSelect" [ngModel]="capacite.importance" (ngModelChange)="onImportanceChanged($event, capacite, characterSheet.capacites)">
                 <option *ngFor="let importance of IMPORTANCES" [ngValue]="importance">{{ importance.name }}</option>
             </select>
@@ -95,7 +95,10 @@
 <h2 class="categoryTitle">Avantages</h2>
 <div class="rowContainer">
     <div *ngFor="let avantage of characterSheet.avantages">
-        <h3 class="gridItemTitle" [ngClass]="avantage.importance">{{ avantage.title }}</h3>
+        <h3 class="gridItemTitle importanceTitle">{{ avantage.title }}</h3>
+        <div class="pointsAvailable">
+            {{ avantage.pointsAvailable }}
+        </div>
         <div class="gridItem" *ngFor="let item of avantage.items">
             <input class="key" *ngIf="item.type === 'input'" [(ngModel)]="item.name">
             <span class="label" *ngIf="!item.type">{{ item.name }}</span>
@@ -103,8 +106,8 @@
                 <div class="point circlePoint" [ngClass]="i < item.points ? 'pointActive' : ''" *ngFor="let point of Arr(item.pointsMax).fill(1); index as i"></div>
             </span>
             <span class="alterPoints">
-                <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item)"></span>
-                <span class="smallButton fa fa-plus" (click)="onItemPlusClick(item)"></span>
+                <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item, avantage)"></span>
+                <span class="smallButton fa fa-plus" (click)="onItemPlusClick(item, avantage)"></span>
             </span>
         </div>
     </div>
