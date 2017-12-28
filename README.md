@@ -1,6 +1,7 @@
 # TODO
 
 * Nosferatu Charisme
+* Historiques
 
 # Vampire
 

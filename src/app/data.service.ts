@@ -942,36 +942,67 @@ export class DataService {
                 pointsAvailable: 5,
                 items: [
                     {
-                        name: '',
-                        type: 'input',
+                        name: 'Alliés',
                         points: 0,
                         pointsMin: 0,
                         pointsMax: 9
                     },
                     {
-                        name: '',
-                        type: 'input',
+                        name: 'Contacts',
                         points: 0,
                         pointsMin: 0,
                         pointsMax: 9
                     },
                     {
-                        name: '',
-                        type: 'input',
+                        name: 'Domaine',
                         points: 0,
                         pointsMin: 0,
                         pointsMax: 9
                     },
                     {
-                        name: '',
-                        type: 'input',
+                        name: 'Fausse identité',
                         points: 0,
                         pointsMin: 0,
                         pointsMax: 9
                     },
                     {
-                        name: '',
-                        type: 'input',
+                        name: 'Influence',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Mentor',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Renommée',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Ressources',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Servants',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Statut',
+                        points: 0,
+                        pointsMin: 0,
+                        pointsMax: 9
+                    },
+                    {
+                        name: 'Troupeau',
                         points: 0,
                         pointsMin: 0,
                         pointsMax: 9
