@@ -12,6 +12,7 @@ export class AppComponent {
 
     clans = DataService.clans;
     archetypes = DataService.archetypes;
+    voies = DataService.voies;
 
     IMPORTANCES = DataService.importances;
     ELEMENT_TYPES = DataService.elementTypes;
@@ -23,7 +24,8 @@ export class AppComponent {
         attitude: this.archetypes[0],
         attributs: DataService.attributs,
         capacites: DataService.capacites,
-        avantages: DataService.avantages
+        avantages: DataService.avantages,
+        voie: DataService.voies[0]
     };
 
     constructor () {
@@ -101,5 +103,9 @@ export class AppComponent {
         });
         this.characterSheet.avantages[0].pointsAvailable = 4;
         this.characterSheet.avantages[0].items = currentDisciplines;
+    }
+
+    onVoieChanged(voie) {
+
     }
 }

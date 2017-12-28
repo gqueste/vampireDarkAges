@@ -1,7 +1,7 @@
 # TODO
 
 * Nosferatu Charisme
-* Historiques
+* Change Voie calcul points et libellé pour Conscience/Maitre de soi
 
 # Vampire
 

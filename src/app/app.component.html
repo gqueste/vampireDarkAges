@@ -118,10 +118,12 @@
         <h3 class="gridItemTitle">Autres traits</h3>
     </div>
     <div>
-        <h3 class="gridItemTitle">Voie</h3>
+        <h3 class="gridItemTitle gridItemTitleSlim">Voie</h3>
         <div class="gridItem">
-            <div class="voie">
-                <input>
+            <div style="width:100%;text-align:center">
+                <select ([ngModel])="characterSheet.voie" (ngModelChange)="onVoieChanged(characterSheet.voie)">
+                    <option *ngFor="let voie of voies" [ngValue]="voie">{{ voie.name }}</option>
+                </select>
             </div>
         </div>
         <div class="gridItem">
@@ -143,7 +145,7 @@
                 Aura : <input class="mediumInput"> (  )
             </div>
         </div>
-        <h3 class="gridItemTitle">Volonté</h3>
+        <h3 class="gridItemTitle gridItemTitleSlim">Volonté</h3>
         <div class="gridItem">
             <div class="pointsLarge">
                 <div class="point circlePoint"></div>
@@ -172,7 +174,7 @@
                 <div class="point"></div>
             </div>
         </div>
-        <h3 class="gridItemTitle">Réserve de sang</h3>
+        <h3 class="gridItemTitle gridItemTitleSlim">Réserve de sang</h3>
         <div class="gridItem">
             <div class="pointsLarge">
                 <div class="point"></div>
@@ -245,7 +247,7 @@
         </div>
     </div>
     <div>
-        <h3 class="gridItemTitle">Santé</h3>
+        <h3 class="gridItemTitle gridItemTitleSlim">Santé</h3>
         <div class="healthItem">
             <div class="healthKey">Contusion</div>
             <div class="point"></div>

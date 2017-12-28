@@ -1012,28 +1012,69 @@ export class DataService {
             {
                 id: 'vertus',
                 title: 'Vertus',
-                pointsAvailable: 3,
+                pointsAvailable: 7,
                 items: [
                     {
                         name: 'Conscience/Conviction',
-                        points: 0,
-                        pointsMin: 0,
-                        pointsMax: 4
+                        points: 1,
+                        pointsMin: 1,
+                        pointsMax: 5
                     },
                     {
                         name: 'Maitre de soi/Instinct',
-                        points: 0,
-                        pointsMin: 0,
-                        pointsMax: 4
+                        points: 1,
+                        pointsMin: 1,
+                        pointsMax: 5
                     },
                     {
                         name: 'Courage',
-                        points: 0,
-                        pointsMin: 0,
-                        pointsMax: 4
+                        points: 1,
+                        pointsMin: 1,
+                        pointsMax: 5
                     }
                 ]
             }
         ];
+    }
+
+    static get voies() {
+        return [
+            {
+                id: 'bete',
+                name: 'Voie de la Bête'
+            },
+            {
+                id: 'paradis',
+                name: 'Voie du Paradis'
+            },
+            {
+                id: 'humanite',
+                name: `Voie de l'Humanité`
+            },
+            {
+                id: 'rois',
+                name: 'Voie des Rois'
+            },
+            {
+                id: 'lilith',
+                name: 'Voie de Lilith'
+            },
+            {
+                id: 'metamorphoses',
+                name: 'Voie des Métamorphoses'
+            },
+            {
+                id: 'péché',
+                name: 'Voie du Péché'
+            },
+            {
+                id: 'ossements',
+                name: 'Voie des Ossements'
+            },
+            {
+                id: 'yasa',
+                name: 'Voie du Yasa'
+            }
+        ]
     }
 }
