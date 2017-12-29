@@ -88,6 +88,42 @@ export class AppComponent {
 
     onClanChange(clan) {
         this.setDisciplines(clan.disciplines);
+        this.resetAttributs();
+
+        // Handle Nosferatu special case
+        const attributItem = this.getAttributItem('Charisme');
+        if (clan.id === 'nosferatu') {
+            // put charisme to 0
+            attributItem.pointsMin = 0;
+            attributItem.points = 0;
+        } else {
+            attributItem.pointsMin = 1;
+            attributItem.points = 1;
+        }
+    }
+
+    getAttributItem(itemName) {
+        const generalAttribute = this.getAttribute(attr =>
+            !!this.getItem(attr, (item) => item.name === itemName)
+        );
+        return this.getItem(generalAttribute, (item) => item.name === itemName);
+    }
+
+    getAttribute(cond) {
+        return this.characterSheet.attributs.find(cond);
+    }
+
+    getItem(attribut, cond) {
+        return attribut.items.find(cond);
+    }
+
+    resetAttributs() {
+        this.characterSheet.attributs.forEach((attribut) => {
+            attribut.pointsAvailable = attribut.importance.defaultPointsAttributs;
+            attribut.items.forEach((item) => {
+                item.points = item.pointsMin;
+            });
+        });
     }
 
     setDisciplines(disciplines) {
