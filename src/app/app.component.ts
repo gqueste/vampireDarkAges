@@ -17,11 +17,24 @@ export class AppComponent {
     IMPORTANCES = DataService.importances;
     ELEMENT_TYPES = DataService.elementTypes;
     MAX_POINTS_CAPACITE = 3;
+    pointsBonus = {
+        points: 15,
+        pointsDefault: 15,
+        cost: {
+            attribut: 5,
+            capacite: 2,
+            discipline: 7,
+            historique: 1,
+            vertu: 2,
+            voie: 2,
+            volonte: 1
+        }
+    };
 
     characterSheet = {
         clan: this.clans[0],
         nature: this.archetypes[0],
-        attitude: this.archetypes[0],
+        attitude: this.archetypes[1],
         attributs: DataService.attributs,
         capacites: DataService.capacites,
         avantages: DataService.avantages,

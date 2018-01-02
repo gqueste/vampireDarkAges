@@ -559,14 +559,133 @@ export class DataService {
     static get archetypes() {
         return [
             {
-                id: 'arch1',
-                name: 'Archétype 1',
-                description: 'Description de l arch 1'
+                name: 'Ange gardien'
             },
             {
-                id: 'arch2',
-                name: 'Archétype 2',
-                description: 'Description de l arch 2'
+                name: 'Architecte'
+            },
+            {
+                name: 'Autocrate'
+            },
+            {
+                name: 'Battant'
+            },
+            {
+                name: 'Bête'
+            },
+            {
+                name: 'Bon vivant'
+            },
+            {
+                name: 'Bouffon'
+            },
+            {
+                name: 'Brute'
+            },
+            {
+                name: 'Caméléon'
+            },
+            {
+                name: 'Casse-cou'
+            },
+            {
+                name: 'Célébrant'
+            },
+            {
+                name: 'Conformiste'
+            },
+            {
+                name: 'Défenseur'
+            },
+            {
+                name: 'Déviant'
+            },
+            {
+                name: 'Dilettante'
+            },
+            {
+                name: 'Dirigiste'
+            },
+            {
+                name: 'Enfant'
+            },
+            {
+                name: 'Enigme'
+            },
+            {
+                name: 'Fanatique'
+            },
+            {
+                name: 'Gourou'
+            },
+            {
+                name: 'Grand-guignol'
+            },
+            {
+                name: 'Idéaliste'
+            },
+            {
+                name: 'Individualiste'
+            },
+            {
+                name: 'Juge'
+            },
+            {
+                name: 'Martyr'
+            },
+            {
+                name: 'Masochiste'
+            },
+            {
+                name: 'Mercenaire'
+            },
+            {
+                name: 'Monstre'
+            },
+            {
+                name: 'Oeil du cyclone'
+            },
+            {
+                name: 'Opportuniste'
+            },
+            {
+                name: 'Pédagogue'
+            },
+            {
+                name: 'Pénitent'
+            },
+            {
+                name: 'Perfectionniste'
+            },
+            {
+                name: 'Philosophe'
+            },
+            {
+                name: 'Râleur'
+            },
+            {
+                name: 'Rebelle'
+            },
+            {
+                name: 'Sadique'
+            },
+            {
+                name: 'Séducteur'
+            },
+            {
+                name: 'Soldat'
+            },
+            {
+                name: 'Solitaire'
+            },
+            {
+                name: 'Survivant'
+            },
+            {
+                name: 'Traditionaliste'
+            },
+            {
+                name: 'Visionnaire'
             }
         ];
     }
