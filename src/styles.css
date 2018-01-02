@@ -155,3 +155,8 @@ input .value {
 .importanceTitle {
     margin-bottom: 0px;
 }
+
+.fullInputContainer {
+    width: 100%;
+    text-align: center;
+}

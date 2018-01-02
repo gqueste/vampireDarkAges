@@ -1,6 +1,6 @@
 # TODO
 
-* Change Voie calcul points et libellé pour Conscience/Maitre de soi
+* Points Bonus
 
 # Vampire
 

@@ -25,7 +25,9 @@ export class AppComponent {
         attributs: DataService.attributs,
         capacites: DataService.capacites,
         avantages: DataService.avantages,
-        voie: DataService.voies[0]
+        voie: DataService.voies[0],
+        niveauVoie: 0,
+        niveauVolonte: 0
     };
 
     constructor () {
@@ -37,6 +39,9 @@ export class AppComponent {
         this.characterSheet.attributs.forEach(setDefaultImportances);
         this.characterSheet.capacites.forEach(setDefaultImportances);
         this.setDisciplines(this.clans[0].disciplines);
+        this.changeVoie(this.voies[0]);
+        this.updateNiveauVoie();
+        this.updateNiveauVolonte();
     }
 
     onItemPlusClick(item, element) {
@@ -48,6 +53,11 @@ export class AppComponent {
             item.points ++;
             element.pointsAvailable --;
         }
+
+        if (element.title === 'Vertus') {
+            this.updateNiveauVoie();
+            this.updateNiveauVolonte();
+        }
     }
 
     onItemMinusClick(item, element) {
@@ -55,6 +65,21 @@ export class AppComponent {
             item.points --;
             element.pointsAvailable ++;
         }
+
+        if (element.title === 'Vertus') {
+            this.updateNiveauVoie();
+            this.updateNiveauVolonte();
+        }
+    }
+
+    updateNiveauVoie() {
+        const vertus = this.characterSheet.avantages[2].items;
+        this.characterSheet.niveauVoie = vertus[0].points + vertus[1].points;
+    }
+
+    updateNiveauVolonte() {
+        const vertus = this.characterSheet.avantages[2].items;
+        this.characterSheet.niveauVolonte = vertus[2].points;
     }
 
     setImportance(element, importance) {
@@ -142,6 +167,13 @@ export class AppComponent {
     }
 
     onVoieChanged(voie) {
+        this.changeVoie(voie);
+    }
 
+    changeVoie(voie) {
+        this.characterSheet.voie = voie;
+        const vertus = this.characterSheet.avantages[2].items;
+        vertus[0].name = voie.firstVertue; // Conscience/Conviction
+        vertus[1].name = voie.secondVertue; //Maitre de soi/Instinct
     }
 }

@@ -1040,40 +1040,124 @@ export class DataService {
     static get voies() {
         return [
             {
-                id: 'bete',
-                name: 'Voie de la Bête'
+                name: 'Voie de la Bête - Via Bestiae',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
             },
             {
-                id: 'paradis',
-                name: 'Voie du Paradis'
+                name: 'Voie de la Bête - Crédo du Chasseur',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
             },
             {
-                id: 'humanite',
-                name: `Voie de l'Humanité`
+                name: 'Voie de la Bête - Crédo du Nomade',
+                firstVertue: 'Conviction',
+                secondVertue: 'Maîtrise de soi',
             },
             {
-                id: 'rois',
-                name: 'Voie des Rois'
+                name: 'Voie de la Bête - Crédo du Libérateur',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
             },
             {
-                id: 'lilith',
-                name: 'Voie de Lilith'
+                name: 'Voie du Paradis - Via Caeli',
+                firstVertue: 'Conscience',
+                secondVertue: 'Maîtrise de soi',
             },
             {
-                id: 'metamorphoses',
-                name: 'Voie des Métamorphoses'
+                name: `Voie de l'Humanité - Via Humanitatis`,
+                firstVertue: 'Conscience',
+                secondVertue: 'Maîtrise de soi',
             },
             {
-                id: 'péché',
-                name: 'Voie du Péché'
+                name: `Voie de l'Humanité - Crédo du Souffle`,
+                firstVertue: 'Conscience',
+                secondVertue: 'Maîtrise de soi',
             },
             {
-                id: 'ossements',
-                name: 'Voie des Ossements'
+                name: `Voie de l'Humanité - Crédo de la Communauté`,
+                firstVertue: 'Conscience',
+                secondVertue: 'Maîtrise de soi',
             },
             {
-                id: 'yasa',
-                name: 'Voie du Yasa'
+                name: `Voie de l'Humanité - Crédo de l'Illumination`,
+                firstVertue: 'Conscience',
+                secondVertue: 'Maîtrise de soi',
+            },
+            {
+                name: 'Voie des Rois - Via Regalis',
+                firstVertue: 'Conviction',
+                secondVertue: 'Maîtrise de soi',
+            },
+            {
+                name: 'Voie des Rois - Crédo de la Chevalerie',
+                firstVertue: 'Conscience',
+                secondVertue: 'Maîtrise de soi',
+            },
+            {
+                name: 'Voie des Rois - Crédo du Devaraja',
+                firstVertue: 'Conviction',
+                secondVertue: 'Maîtrise de soi',
+            },
+            {
+                name: 'Voie des Rois - Crédo du Daena',
+                firstVertue: 'Conviction',
+                secondVertue: 'Maîtrise de soi',
+            },
+            {
+                name: 'Voie de Lilith - Derech Lilith',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
+            },
+            {
+                name: 'Voie de Lilith - Crédo des Epines',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
+            },
+            {
+                name: 'Voie de Lilith - Crédo des Voiles',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
+            },
+            {
+                name: 'Voie de Lilith - Crédo de la Création',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
+            },
+            {
+                name: 'Voie de la Métamorphose - Via Mutationis',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
+            },
+            {
+                name: 'Voie du Péché - Via Peccati',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
+            },
+            {
+                name: 'Voie du Péché - Crédo du Plaisir',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
+            },
+            {
+                name: 'Voie du Diable - Crédo du Plaisir',
+                firstVertue: 'Conviction',
+                secondVertue: 'Maîtrise de soi',
+            },
+            {
+                name: 'Voie du Diable - Crédo des Cris',
+                firstVertue: 'Conviction',
+                secondVertue: 'Instinct',
+            },
+            {
+                name: 'Voie des Ossements',
+                firstVertue: 'Conviction',
+                secondVertue: 'Maîtrise de soi',
+            },
+            {
+                name: 'Voie du Yasa',
+                firstVertue: 'Conviction',
+                secondVertue: 'Maîtrise de soi',
             }
         ]
     }

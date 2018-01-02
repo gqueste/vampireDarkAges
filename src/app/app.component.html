@@ -120,24 +120,15 @@
     <div>
         <h3 class="gridItemTitle gridItemTitleSlim">Voie</h3>
         <div class="gridItem">
-            <div style="width:100%;text-align:center">
-                <select ([ngModel])="characterSheet.voie" (ngModelChange)="onVoieChanged(characterSheet.voie)">
+            <div class="fullInputContainer">
+                <select [ngModel]="characterSheet.voie" (ngModelChange)="onVoieChanged($event)">
                     <option *ngFor="let voie of voies" [ngValue]="voie">{{ voie.name }}</option>
                 </select>
             </div>
         </div>
         <div class="gridItem">
             <div class="pointsLarge">
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
+                <div class="point circlePoint" [ngClass]="i < characterSheet.niveauVoie ? 'pointActive' : ''" *ngFor="let point of Arr(10).fill(1); index as i"></div>
             </div>
         </div>
         <div class="gridItem">
@@ -148,16 +139,7 @@
         <h3 class="gridItemTitle gridItemTitleSlim">Volonté</h3>
         <div class="gridItem">
             <div class="pointsLarge">
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
-                <div class="point circlePoint"></div>
+                <div class="point circlePoint" [ngClass]="i < characterSheet.niveauVolonte ? 'pointActive' : ''" *ngFor="let point of Arr(10).fill(1); index as i"></div>
             </div>
         </div>
         <div class="gridItem">
