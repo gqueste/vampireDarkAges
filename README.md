@@ -1,6 +1,6 @@
 # TODO
 
-* Points Bonus
+* +- pour Points Bonus dans Voie et Volonté
 
 # Vampire
 

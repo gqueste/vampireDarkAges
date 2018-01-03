@@ -160,3 +160,11 @@ input .value {
     width: 100%;
     text-align: center;
 }
+
+.plusBonus {
+    color: brown;
+}
+
+.centerTitle {
+    text-align: center;
+}

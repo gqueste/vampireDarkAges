@@ -1017,6 +1017,7 @@ export class DataService {
                 id: 'disciplines',
                 title: 'Disciplines',
                 pointsAvailable: 4,
+                defaultPoints: 4,
                 items: [
                     {
                         name: '',
@@ -1059,6 +1060,7 @@ export class DataService {
                 id: 'historique',
                 title: 'Historique',
                 pointsAvailable: 5,
+                defaultPoints: 5,
                 items: [
                     {
                         name: 'Alliés',
@@ -1132,6 +1134,7 @@ export class DataService {
                 id: 'vertus',
                 title: 'Vertus',
                 pointsAvailable: 7,
+                defaultPoints: 7,
                 items: [
                     {
                         name: 'Conscience/Conviction',

@@ -48,6 +48,7 @@
         </div>
     </div>
 </div>
+<h3 class="centerTitle">Points bonus disponibles : {{ pointsBonus.points }}</h3>
 <h2 class="categoryTitle">Attributs</h2>
 <div class="rowContainer">
     <div *ngFor="let attribut of characterSheet.attributs">
@@ -65,7 +66,7 @@
             </span>
             <span class="alterPoints">
                 <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item, attribut)"></span>
-                <span class="smallButton fa fa-plus" (click)="onItemPlusClick(item, attribut)"></span>
+                <span class="smallButton fa fa-plus" [ngClass]="attribut.pointsAvailable <= 0 ? 'plusBonus' : ''" (click)="onItemPlusClick(item, attribut)"></span>
             </span>
         </div>
     </div>
@@ -87,7 +88,7 @@
             </span>
             <span class="alterPoints">
                 <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item, capacite)"></span>
-                <span class="smallButton fa fa-plus" (click)="onItemPlusClick(item, capacite)"></span>
+                <span class="smallButton fa fa-plus" [ngClass]="capacite.pointsAvailable <= 0 ? 'plusBonus' : ''" (click)="onItemPlusClick(item, capacite)"></span>
             </span>
         </div>
     </div>
@@ -107,7 +108,7 @@
             </span>
             <span class="alterPoints">
                 <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item, avantage)"></span>
-                <span class="smallButton fa fa-plus" (click)="onItemPlusClick(item, avantage)"></span>
+                <span class="smallButton fa fa-plus" [ngClass]="avantage.pointsAvailable <= 0 ? 'plusBonus' : ''" (click)="onItemPlusClick(item, avantage)"></span>
             </span>
         </div>
     </div>

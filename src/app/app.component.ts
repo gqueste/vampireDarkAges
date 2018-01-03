@@ -62,9 +62,14 @@ export class AppComponent {
         const pointsAvailable = e => e.pointsAvailable > 0;
         const maxCapacite = (e, i) => this.isCapacite(e) && i.points >= this.MAX_POINTS_CAPACITE;
 
+        const bonusCost = this.getBonusCostForElementItem(element, item);
+
         if (!maxedOut(item) && pointsAvailable(element) && !maxCapacite(element, item)) {
             item.points ++;
             element.pointsAvailable --;
+        } else if (!maxedOut(item) && !pointsAvailable(element) && this.pointsBonus.points >= bonusCost) { // Gestion Points Bonus
+            item.points ++;
+            this.pointsBonus.points -= bonusCost;
         }
 
         if (element.title === 'Vertus') {
@@ -73,10 +78,51 @@ export class AppComponent {
         }
     }
 
+    getBonusCostForElementItem(element, item) {
+        if (this.isAttribute(element)) {
+            return this.pointsBonus.cost.attribut;
+        }
+        if (this.isCapacite(element)) {
+            return this.pointsBonus.cost.capacite;
+        }
+        if (this.isDiscipline(element)) {
+            return this.pointsBonus.cost.discipline;
+        }
+        if (this.isHistorique(element)) {
+            return this.pointsBonus.cost.historique;
+        }
+        if (this.isVertu(element)) {
+            return this.pointsBonus.cost.vertu;
+        }
+    }
+
+    getTotalInvestmentInElement(element) {
+        let totalInvestedInElement = 0;
+        element.items.forEach((item) => {
+            totalInvestedInElement += item.points - item.pointsMin;
+        });
+        return totalInvestedInElement;
+    }
+
+    getDefaultPointsAvailableForElement(element) {
+        if (element.importance) {
+            return this.isAttribute(element) ? element.importance.defaultPointsAttributs : element.importance.defaultPointsCapacites;
+        } else {
+            return element.defaultPoints;
+        }
+    }
+
     onItemMinusClick(item, element) {
+        const onBonusPoint = this.getTotalInvestmentInElement(element) > this.getDefaultPointsAvailableForElement(element);
+        const bonusCost = this.getBonusCostForElementItem(element, item);
+
         if (item.points > item.pointsMin) {
             item.points --;
-            element.pointsAvailable ++;
+            if (onBonusPoint) {
+                this.pointsBonus.points += bonusCost;
+            } else {
+                element.pointsAvailable ++;
+            }
         }
 
         if (element.title === 'Vertus') {
@@ -107,6 +153,18 @@ export class AppComponent {
 
     isAttribute(element) {
         return element.type && element.type.id === this.ELEMENT_TYPES.ATTRIBUT.id;
+    }
+
+    isDiscipline(element) {
+        return element.id === 'disciplines';
+    }
+
+    isHistorique(element) {
+        return element.id === 'historique';
+    }
+
+    isVertu(element) {
+        return element.id === 'vertus';
     }
 
     onImportanceChanged(importance, element, arr) {
