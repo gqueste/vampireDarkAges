@@ -40,7 +40,9 @@ export class AppComponent {
         avantages: DataService.avantages,
         voie: DataService.voies[0],
         niveauVoie: 0,
-        niveauVolonte: 0
+        niveauVolonte: 0,
+        bonusVoie: 0,
+        bonusVolonte: 0
     };
 
     constructor () {
@@ -246,5 +248,20 @@ export class AppComponent {
         const vertus = this.characterSheet.avantages[2].items;
         vertus[0].name = voie.firstVertue; // Conscience/Conviction
         vertus[1].name = voie.secondVertue; //Maitre de soi/Instinct
+    }
+
+    onVoieVolonteMinusClick(targetBonus, target) {
+        if (this.characterSheet[targetBonus] > 0) {
+            this.characterSheet[targetBonus] --;
+            this.pointsBonus.points += this.pointsBonus.cost[target];
+        }
+    }
+
+    onVoieVolontePlusClick(targetBonus, target, niveau) {
+        const maxedOut = this.characterSheet[niveau] + this.characterSheet[targetBonus] >= 10;
+        if (this.pointsBonus.points > this.pointsBonus.cost[target] && !maxedOut) {
+            this.characterSheet[targetBonus] ++;
+            this.pointsBonus.points -= this.pointsBonus.cost[target];
+        }
     }
 }

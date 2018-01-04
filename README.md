@@ -1,6 +1,6 @@
 # TODO
 
-* +- pour Points Bonus dans Voie et Volonté
+* Légende : + - couleurs Bonus & cout bonus
 
 # Vampire
 

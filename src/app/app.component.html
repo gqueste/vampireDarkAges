@@ -66,7 +66,7 @@
             </span>
             <span class="alterPoints">
                 <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item, attribut)"></span>
-                <span class="smallButton fa fa-plus" [ngClass]="attribut.pointsAvailable <= 0 ? 'plusBonus' : ''" (click)="onItemPlusClick(item, attribut)"></span>
+                <span class="smallButton fa fa-plus" [ngClass]="attribut.pointsAvailable <= 0 ? 'alterBonus' : ''" (click)="onItemPlusClick(item, attribut)"></span>
             </span>
         </div>
     </div>
@@ -88,7 +88,7 @@
             </span>
             <span class="alterPoints">
                 <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item, capacite)"></span>
-                <span class="smallButton fa fa-plus" [ngClass]="capacite.pointsAvailable <= 0 ? 'plusBonus' : ''" (click)="onItemPlusClick(item, capacite)"></span>
+                <span class="smallButton fa fa-plus" [ngClass]="capacite.pointsAvailable <= 0 ? 'alterBonus' : ''" (click)="onItemPlusClick(item, capacite)"></span>
             </span>
         </div>
     </div>
@@ -108,7 +108,7 @@
             </span>
             <span class="alterPoints">
                 <span class="smallButton fa fa-minus" (click)="onItemMinusClick(item, avantage)"></span>
-                <span class="smallButton fa fa-plus" [ngClass]="avantage.pointsAvailable <= 0 ? 'plusBonus' : ''" (click)="onItemPlusClick(item, avantage)"></span>
+                <span class="smallButton fa fa-plus" [ngClass]="avantage.pointsAvailable <= 0 ? 'alterBonus' : ''" (click)="onItemPlusClick(item, avantage)"></span>
             </span>
         </div>
     </div>
@@ -129,7 +129,11 @@
         </div>
         <div class="gridItem">
             <div class="pointsLarge">
-                <div class="point circlePoint" [ngClass]="i < characterSheet.niveauVoie ? 'pointActive' : ''" *ngFor="let point of Arr(10).fill(1); index as i"></div>
+                <div class="point circlePoint" [ngClass]="i < (characterSheet.niveauVoie + characterSheet.bonusVoie) ? 'pointActive' : ''" *ngFor="let point of Arr(10).fill(1); index as i"></div>
+                <span class="alterPoints">
+                    <span class="smallButton fa fa-minus alterBonus" (click)="onVoieVolonteMinusClick('bonusVoie', 'voie')"></span>
+                    <span class="smallButton fa fa-plus alterBonus" (click)="onVoieVolontePlusClick('bonusVoie', 'voie', 'niveauVoie')"></span>
+                </span>
             </div>
         </div>
         <div class="gridItem">
@@ -140,7 +144,11 @@
         <h3 class="gridItemTitle gridItemTitleSlim">Volonté</h3>
         <div class="gridItem">
             <div class="pointsLarge">
-                <div class="point circlePoint" [ngClass]="i < characterSheet.niveauVolonte ? 'pointActive' : ''" *ngFor="let point of Arr(10).fill(1); index as i"></div>
+                <div class="point circlePoint" [ngClass]="i < (characterSheet.niveauVolonte + characterSheet.bonusVolonte) ? 'pointActive' : ''" *ngFor="let point of Arr(10).fill(1); index as i"></div>
+                <span class="alterPoints">
+                    <span class="smallButton fa fa-minus alterBonus" (click)="onVoieVolonteMinusClick('bonusVolonte', 'volonte')"></span>
+                    <span class="smallButton fa fa-plus alterBonus" (click)="onVoieVolontePlusClick('bonusVolonte', 'volonte', 'niveauVolonte')"></span>
+                </span>
             </div>
         </div>
         <div class="gridItem">
